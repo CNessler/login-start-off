@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  
+  h1 Login NOW!
+  if error
+    p= error
+  
+  form(action='/' method='post')
+    label Username
+    p
+      input(type='text' placeholder='Username' autofocus name='userName')
+      p
+    label Password
+    p
+      input(type='password' placeholder='Password' name='password')
+      p
+    input(type='submit' value='Sign In')
+    p
+    a(href='/signup') Sign Up Now
+    p

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  a(href='/') Home page
+  p
+  h1 Sign Up NOW!
+  if errors
+    each error in errors
+      p#error= error
+  form(action='/signup' method='post')
+    label Username
+    p
+      input(type='text' placeholder='Username' autofocus name='userName')
+      p
+    label Password
+    p
+      input(type='password' placeholder='Password' name='password')
+      p
+    label Confirm Password
+    p
+      input(type='password' placeholder='Password' name='passCheck')
+      p
+    input(type='submit' value='Sign Up')
